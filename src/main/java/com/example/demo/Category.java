@@ -2,27 +2,17 @@ package com.example.demo;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @Entity
-public class Expense {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Positive
-    private BigDecimal amount;
-
     @NotBlank
-    private String category;
+    private String name;
 
     private String description;
-
-    @NotNull
-    @PastOrPresent
-    private LocalDate date;
 
     // Getters and Setters
 }
